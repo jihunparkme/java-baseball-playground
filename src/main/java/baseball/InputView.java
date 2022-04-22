@@ -4,10 +4,18 @@ import java.util.Scanner;
 
 public class InputView {
 
-    public static int inputNumber() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("숫자를 입력해 주세요 : ");
+    private static Scanner scanner = new Scanner(System.in);
 
-        return scanner.nextInt();
+    public static int[] inputNumber() {
+
+        System.out.print("숫자를 입력해 주세요 : ");
+        int input = scanner.nextInt();
+        int[] result = new int[3];
+        for (int i = 2; i >= 0; i++) {
+            result[i] = input % 10;
+            input /= 10;
+        }
+
+        return result;
     }
 }

@@ -11,9 +11,10 @@ public class BaseballGame {
         ResultView resultView = new ResultView();
 
         Integer[] computerNumber = getComputerNumber();
+        int[] ints = inputView.inputNumber();
     }
 
-    private static Integer[] getComputerNumber() {
+    public static Integer[] getComputerNumber() {
         Set<Integer> numbers = new HashSet<>();
 
         while (numbers.size() < 3) {
