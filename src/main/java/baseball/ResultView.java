@@ -2,9 +2,6 @@ package baseball;
 
 public class ResultView {
 
-    public static void getResult() {
-    }
-
     public boolean printResult(Integer[] computerNumber, int[] input) {
 
         StringBuilder sb = new StringBuilder();
@@ -29,7 +26,7 @@ public class ResultView {
         return true;
     }
 
-    private int checkBall(Integer[] computer, int[] me) {
+    public int checkBall(Integer[] computer, int[] me) {
         int result = 0;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -41,7 +38,7 @@ public class ResultView {
         return result;
     }
 
-    private int checkStrike(Integer[] computer, int[] me) {
+    public int checkStrike(Integer[] computer, int[] me) {
         int result = 0;
         if (computer[0] == me[0]) {
             result++;
